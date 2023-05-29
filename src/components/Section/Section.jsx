@@ -1,5 +1,6 @@
 import { Component } from 'react';
 import styles from './Section.module.css';
+import PropTypes from 'prop-types';
 
 export class Section extends Component {
   render() {
@@ -11,4 +12,6 @@ export class Section extends Component {
     );
   }
 }
-/////////
+Section.propTypes = {
+  title: PropTypes.string,
+};

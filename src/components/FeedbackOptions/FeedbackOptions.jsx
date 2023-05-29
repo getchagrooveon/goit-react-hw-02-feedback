@@ -1,5 +1,7 @@
 import { Component } from 'react';
 import styles from './FeedbackOptions.module.css';
+import PropTypes from 'prop-types';
+
 export class FeedbackOptions extends Component {
   render() {
     const props = this.props;
@@ -21,3 +23,7 @@ export class FeedbackOptions extends Component {
     );
   }
 }
+
+FeedbackOptions.propTypes = {
+  options: PropTypes.object,
+};
