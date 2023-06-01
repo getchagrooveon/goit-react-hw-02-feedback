@@ -40,19 +40,23 @@ export class Feedback extends Component {
 
   render() {
     return (
-      <Section title="Please leave a feedback">
-        <FeedbackOptions
-          options={this.state}
-          onLeaveFeedback={this.handleClick}
-        />
-        <Statistics
-          good={this.state.good}
-          neutral={this.state.neutral}
-          bad={this.state.bad}
-          total={this.countTotalFeedback()}
-          positivePercentage={this.countPositiveFeedbackPercentage()}
-        />
-      </Section>
+      <>
+        <Section title="Please leave a feedback">
+          <FeedbackOptions
+            options={this.state}
+            onLeaveFeedback={this.handleClick}
+          />
+        </Section>
+        <Section title="Statistics">
+          <Statistics
+            good={this.state.good}
+            neutral={this.state.neutral}
+            bad={this.state.bad}
+            total={this.countTotalFeedback()}
+            positivePercentage={this.countPositiveFeedbackPercentage()}
+          />
+        </Section>
+      </>
     );
   }
 }
