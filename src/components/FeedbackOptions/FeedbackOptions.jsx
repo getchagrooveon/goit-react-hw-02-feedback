@@ -10,7 +10,7 @@ export const FeedbackOptions = ({ options, onLeaveFeedback }) => {
           <button
             key={element}
             className={styles.button}
-            onClick={onLeaveFeedback}
+            onClick={() => onLeaveFeedback(element)}
           >
             {element}
           </button>
@@ -22,4 +22,5 @@ export const FeedbackOptions = ({ options, onLeaveFeedback }) => {
 
 FeedbackOptions.propTypes = {
   options: PropTypes.object,
+  onLeaveFeedback: PropTypes.func,
 };
